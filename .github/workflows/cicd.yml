@@ -64,4 +64,4 @@ jobs:
       - name: Run docker
         run: |
           docker stop ${{ env.DOCKER_CONTAINER }} && docker rm ${{ env.DOCKER_CONTAINER }} && docker rmi ${{ env.REGISTRY }}/${{ env.DOCKER_IMAGE }}:latest 
-          docker run -d -p 80:3000 --name ${{ env.DOCKER_CONTAINER }} --restart always ${{ env.REGISTRY }}/${{ env.DOCKER_IMAGE }}:latest \
+          docker run -d -p 8080:3000 --name ${{ env.DOCKER_CONTAINER }} --restart always ${{ env.REGISTRY }}/${{ env.DOCKER_IMAGE }}:latest \
